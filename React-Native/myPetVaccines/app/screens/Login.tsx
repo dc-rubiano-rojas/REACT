@@ -11,9 +11,11 @@ const Login = ({ navigation }: any) => {
 
     const auth = FIREBASE_AUTH
     const signIn = async () => {
+        console.log('signin')
+        
         setLoading(true)
         try {
-            const response = signInWithEmailAndPassword(auth, email, password)
+            const response = await signInWithEmailAndPassword(auth, email, password)
             console.log(response);
         } catch (error: any) {
             console.log(error);
@@ -23,16 +25,18 @@ const Login = ({ navigation }: any) => {
         }
     }
     const register = async () => {
+        console.log('register')
+
         setLoading(true)
         try {
-            const response = createUserWithEmailAndPassword(auth, email, password)
+            const response = await createUserWithEmailAndPassword(auth, email, password)
             console.log(response);
         } catch (error: any) {
             console.log(error);
             alert('register in failed: ' + error.message)
         } finally {
             setLoading(false)
-            navigation.navigate('Home')
+            //navigation.navigate('Home')
         }
     }
 
