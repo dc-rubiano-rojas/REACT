@@ -15,7 +15,7 @@ const Home = ({ navigation }: RouterProps) => {
     const onPress = () => navigation.navigate('Pet Register')
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: Colors.$backgroundGeneralMedium }}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.secondary }}>
             <View style={styles.container}>
 
                 {/*             <MyPets/>

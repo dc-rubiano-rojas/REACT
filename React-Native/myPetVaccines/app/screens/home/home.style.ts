@@ -18,13 +18,13 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     marginTop: 10,
     padding: 10,
-    backgroundColor: Colors.$backgroundDark,
+    backgroundColor: COLORS.primary,
   },
   buttonText: {
     paddingTop: 7,
     fontSize: SIZES.medium,
     fontFamily: FONT.medium,
-    color: COLORS.gray,
+    color: COLORS.secondary,
   }
 });
 
