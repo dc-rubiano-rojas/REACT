@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 
 import { NavigationContainer } from '@react-navigation/native';
+import { useFonts } from 'expo-font';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { DrawerContentScrollView, DrawerItem, DrawerItemList, createDrawerNavigator } from '@react-navigation/drawer';
@@ -10,11 +11,11 @@ import Home from './app/screens/home/Home';
 import { icons, images } from './constants';
 import { ScreenHeaderBtn } from './components';
 import { User, onAuthStateChanged } from 'firebase/auth';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { FIREBASE_AUTH } from './firebaseConfig';
 import PetRegister from './app/screens/pet-register/PetRegister';
 import Profile from './app/screens/profile/Profile';
-
+import * as SplashScreen from 'expo-splash-screen';
 
 const Stack = createNativeStackNavigator();
 const InsideStack = createNativeStackNavigator();
@@ -59,6 +60,12 @@ function InsideLayout() {
 }
 
 export default function App() {
+  const [fontsLoaded, fontError] = useFonts({
+    KSBold: require('./assets/fonts/KumbhSans-Bold.ttf'),
+    KSMedium: require('./assets/fonts/KumbhSans-Medium.ttf'),
+    KSRegular: require('./assets/fonts/KumbhSans-Regular.ttf'),
+  });
+
   const [user, setUser] = useState<User | null>(null)
 
   useEffect(() => {
@@ -69,7 +76,7 @@ export default function App() {
 
 
   return (
-    <NavigationContainer>
+    <NavigationContainer >
       <Stack.Navigator initialRouteName='Login'>
 
         {user ? <Stack.Screen name="Inside" component={InsideLayout} options={{ headerShown: false }} />
@@ -80,3 +87,4 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
