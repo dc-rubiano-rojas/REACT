@@ -33,3 +33,5 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# aun no se ha instalado cd ios && pod install de la ui library

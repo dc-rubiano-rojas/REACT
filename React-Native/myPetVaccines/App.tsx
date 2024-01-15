@@ -6,12 +6,14 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { DrawerContentScrollView, DrawerItem, DrawerItemList, createDrawerNavigator } from '@react-navigation/drawer';
 import Detail from './app/screens/Detail';
 import Login from './app/screens/Login';
-import Home from './app/screens/Home';
+import Home from './app/screens/home/Home';
 import { icons, images } from './constants';
 import { ScreenHeaderBtn } from './components';
 import { User, onAuthStateChanged } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { FIREBASE_AUTH } from './firebaseConfig';
+import PetRegister from './app/screens/pet-register/PetRegister';
+import Profile from './app/screens/profile/Profile';
 
 
 const Stack = createNativeStackNavigator();
@@ -41,8 +43,8 @@ export function MyDrawer() {
           <ScreenHeaderBtn iconUrl={images.profile} dimension='100%' handlePress={undefined} />
         ),
       }} />
-      <Drawer.Screen name="Pet Register" component={Detail} />
-      <Drawer.Screen name="Profile" component={Detail} />
+      <Drawer.Screen name="Pet Register" component={PetRegister} />
+      <Drawer.Screen name="Profile" component={Profile} />
     </Drawer.Navigator>
   );
 }
@@ -51,6 +53,7 @@ function InsideLayout() {
   return (
     <InsideStack.Navigator>
       <InsideStack.Screen name='Home' component={MyDrawer} options={{ headerShown: false }} />
+      <InsideStack.Screen name='Pet Register' component={PetRegister} />
     </InsideStack.Navigator>
   )
 }
