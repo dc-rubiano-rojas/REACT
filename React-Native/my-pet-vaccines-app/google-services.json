@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "610582710844",
+    "project_id": "my-pet-vaccines",
+    "storage_bucket": "my-pet-vaccines.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610582710844:android:f226d0899980dc6ae5d139",
+        "android_client_info": {
+          "package_name": "com.pet.vaccines"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "610582710844-8v4cvjm58l1gb22kda1s5b453uegrn45.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pet.vaccines",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "610582710844-ehgc5hgg7lnblis7f5ireot1c0ic4k64.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYjzSX8GtKCFJAubNYT8Eg2HELdEYZSmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "610582710844-ehgc5hgg7lnblis7f5ireot1c0ic4k64.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "610582710844-lq51rf6cujsh6a41cq9lfatvab8n4hsk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pet.vaccines"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
